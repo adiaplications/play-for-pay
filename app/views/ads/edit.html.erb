@@ -1,0 +1,12 @@
+<%= error_messages_for(@ad) %>
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="ads edit">
+  <h2>Update Ad</h2>
+  <%= form_for(:ad, :url => {:action => 'update', :id => @ad.id, :campaign_id => @ad.campaign_id}) do |f| %>
+      <%= render(:partial => "form", :locals => {:f => f}) %>
+      <div class="form-buttons">
+        <%= submit_tag("Update Ad") %>
+      </div>
+  <% end %>
+</div>

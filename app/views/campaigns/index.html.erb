@@ -1,0 +1,38 @@
+<div class="campaigns index">
+  <h2>Campaigns</h2>
+
+  <%= link_to("Add New Campaign", {:action => 'new'}, :class => 'action new') %>
+
+  <table class="listing" summary="Campaign list">
+    <tr class="header">
+      <th class="center"><%= sortable "company" , "Company" %></th>
+      <th class="center"><%= sortable "commision_type" , "Commision Type" %></th>
+      <th class="center"><%= sortable "campaign" , "Campaign" %></th>
+      <th class="center">Image</th>
+      <th class="center"><%= sortable "package_name" , "Package Name" %></th>
+      <th class="center"><%= sortable "type" , "Type" %></th>
+      <th class="center"><%= sortable "active" , "Active" %></th>
+      <th class="center"><%= sortable "campaign.ads.size" , "#Ads" %></th>
+      <th class="center"><%= sortable "min_sdk" , "Min SDK" %></th>
+      <th class="center">Actions</th>
+    </tr>
+    <% @campaigns.each do |campaign| %>
+        <tr>
+          <td class="center"><%= campaign.company %></td>
+          <td class="center"><%= campaign.commision_type %></td>
+          <td class="center"><%= campaign.name %></td>
+          <td class="center"><%= link_to(image_tag(campaign.image_url , :width => 80, :height => 50), {:controller => 'ads', :action => 'show_campaign_ads', :id => campaign.id}) %></td>
+          <td class="center"><%= campaign.package_name %></td>
+          <td class="center"><%= campaign.package_type %></td>
+          <td class="center"><%= status_tag(campaign.active)%></td>
+          <td class="center"><%= link_to(campaign.ads.size, {:controller => 'ads', :action => 'show_campaign_ads', :id => campaign.id}) %></td>
+          <td class="center"><%= campaign.min_sdk %></td>
+          <td class="actions">
+            <%= link_to("Show", {:action => 'show', :id => campaign.id}, :class => 'action show') %>
+            <%= link_to("Edit", {:action => 'edit', :id => campaign.id}, :class => 'action edit') %>
+            <%= link_to("Delete", {:action => 'delete', :id => campaign.id}, :class => 'action delete') %>
+          </td>
+        </tr>
+    <% end %>
+  </table>
+</div>

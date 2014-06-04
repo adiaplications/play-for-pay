@@ -1,0 +1,29 @@
+<div class="ads index">
+  <h2>Ads</h2>
+  <%= link_to("Add New Ad", {:action => 'new'}, :class => 'action new') %>
+
+  <table class="listing" summary="Ad list">
+    <tr class="header">
+      <th class="center">Active?</th>
+      <th class="center">Campaign</th>
+      <th class="center"><%= sortable "country" , "Country" %></th>
+      <th class="center"><%= sortable "price" , "Price" %></th>
+      <th class="center">Link Url</th>
+
+    </tr>
+    <% @ads.each do |ad| %>
+        <tr>
+          <td class="center"><%= status_tag(ad.campaign.active) if ad.campaign %></td>
+          <td class="center"><%= ad.campaign.name if ad.campaign %></td>
+          <td class="center"><%= ad.country %></td>
+          <td class="center"><%= number_to_currency(ad.price) %></td>
+          <td class="center"><%= ad.link_url %></td>
+          <td class="actions">
+            <%= link_to("Show", {:action => 'show', :id => ad.id}, :class => 'action show') %>
+            <%= link_to("Edit", {:action => 'edit', :id => ad.id}, :class => 'action edit') %>
+            <%= link_to("Delete", {:action => 'delete', :id => ad.id}, :class => 'action delete') %>
+          </td>
+        </tr>
+    <% end %>
+  </table>
+</div>

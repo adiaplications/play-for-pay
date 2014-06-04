@@ -1,0 +1,56 @@
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="ad show">
+  <h2>Show Ad</h2>
+  <table summary="Ad detail view">
+    <% if false %>
+        <tr>
+          <th>Campaign Name</th>
+          <td><%= @campaign.name %></td>
+        </tr>
+        <tr>
+          <th>Package Name</th>
+          <td><%= @campaign.package_name %></td>
+        </tr>
+        <tr>
+          <th>Type</th>
+          <td><%= @campaign.type %></td>
+        </tr>
+        <tr>
+          <th>Image Url</th>
+          <td><%= @campaign.image_url %></td>
+        </tr>
+        <tr>
+          <th>Active?</th>
+          <td><%= status_tag(@campaign.active) %></td>
+        </tr>
+    <% end %>
+
+    <tr>
+      <th>Campaign name</th>
+      <td><%= @ad.campaign.name if @ad.campaign %></td>
+    </tr>
+    <tr>
+      <th>Country</th>
+      <td><%= @ad.country %></td>
+    </tr>
+    <tr>
+      <th>Price</th>
+      <td><%= number_to_currency(@ad.price) %></td>
+    </tr>
+    <tr>
+      <th>Link Url</th>
+      <td><%= @ad.link_url %></td>
+    </tr>
+
+    <tr>
+      <th>Created</th>
+      <td><%= @ad.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @ad.updated_at %></td>
+    </tr>
+  </table>
+
+</div>

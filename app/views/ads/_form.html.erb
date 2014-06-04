@@ -1,0 +1,18 @@
+<table summary="Ad form fields">
+  <tr>
+    <th>Campaign Name</th>
+    <td><%= f.select(:campaign_id, @campaings.map { |s| [s.name, s.id]}) %></td>
+  </tr>
+  <tr>
+    <th>Country</th>
+    <td><%= f.country_select(:country) %></td>
+  </tr>
+  <tr>
+    <th>Price</th>
+    <td><%= f.number_field :price, :class => 'text_field', :step => 'any' %></td>
+  </tr>
+  <tr>
+    <th>Link Url</th>
+    <td><%= f.text_field(:link_url) %></td>
+  </tr>
+</table>

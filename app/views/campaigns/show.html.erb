@@ -1,0 +1,49 @@
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="campaign show">
+  <h2>Show Campaign</h2>
+  <table summary="Campaign detail view">
+
+    <tr>
+      <th>Company</th>
+      <td><%= @campaign.company %></td>
+    </tr>
+    <tr>
+      <th>Type</th>
+      <td><%= @campaign.commision_type %></td>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <td><%= @campaign.name %></td>
+    </tr>
+    <tr>
+      <th>Image Url</th>
+      <td><%= image_tag(@campaign.image_url , :width => 80, :height => 50) %></td>
+    </tr>
+    <tr>
+      <th>Package Name</th>
+      <td><%= @campaign.package_name %></td>
+    </tr>
+    <tr>
+      <th>Type</th>
+      <td><%= @campaign.package_type %></td>
+    </tr>
+    <tr>
+      <th>Active?</th>
+      <td><%= status_tag(@campaign.active) %></td>
+    </tr>
+    <tr>
+      <th>Min SDK</th>
+      <td><%= @campaign.min_sdk %></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @campaign.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @campaign.updated_at %></td>
+    </tr>
+  </table>
+
+</div>

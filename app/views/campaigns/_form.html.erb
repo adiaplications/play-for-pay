@@ -1,0 +1,34 @@
+<table summary="Campaign form fields">
+  <tr>
+    <th>Company</th>
+    <td><%= f.select(:package_type, ['Mobpartner', 'Mobclicks'] ) %></td>
+  </tr>
+  <tr>
+    <th>Commision Type</th>
+    <td><%= f.select(:commision_type, ['CPI', 'CPC'] ) %></td>
+  </tr>
+  <tr>
+    <th>Name</th>
+    <td><%= f.text_field(:name) %></td>
+  </tr>
+  <tr>
+    <th>Image Url</th>
+    <td><%= f.text_field(:image_url) %></td>
+  </tr>
+  <tr>
+    <th>Package Name</th>
+    <td><%= f.text_field(:package_name) %></td>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <td><%= f.select(:package_type, ['App', 'Game'] ) %></td>
+  </tr>
+  <tr>
+    <th>Active?</th>
+    <td><%= f.select(:active, {"Yes" =>true, "No" => false} ) %></td>
+  </tr>
+  <tr>
+    <th>Min SDK</th>
+    <td><%= f.number_field  :min_sdk, :class => 'text_field', :step => 'any' %></td>
+  </tr>
+</table>

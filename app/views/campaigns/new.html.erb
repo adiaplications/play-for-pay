@@ -1,0 +1,12 @@
+<%= error_messages_for(@campaign) %>
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="campaigns new">
+  <h2>Create Campaign</h2>
+  <%= form_for(:campaign, :url => {:action => 'create'}) do |f| %>
+      <%= render(:partial => "form", :locals => {:f => f}) %>
+      <div class="form-buttons">
+        <%= submit_tag("Create Campaign") %>
+      </div>
+  <% end %>
+</div>
