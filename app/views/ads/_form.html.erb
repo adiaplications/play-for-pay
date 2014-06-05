@@ -8,6 +8,11 @@
     <td><%= f.country_select(:country) %></td>
   </tr>
   <tr>
+    <th>Country</th>
+    <td><%= javascript_tag("get_countries();") %></td>
+  </tr>
+
+  <tr>
     <th>Price</th>
     <td><%= f.number_field :price, :class => 'text_field', :step => 'any' %></td>
   </tr>
@@ -16,3 +21,5 @@
     <td><%= f.text_field(:link_url) %></td>
   </tr>
 </table>
+
+<%= javascript_tag("get_countries();") %>
