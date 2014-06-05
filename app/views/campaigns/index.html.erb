@@ -6,6 +6,7 @@
   <table class="listing" summary="Campaign list">
     <tr class="header">
       <th class="center"><%= sortable "company" , "Company" %></th>
+      <th class="center"><%= sortable "os" , "OS" %></th>
       <th class="center"><%= sortable "commision_type" , "Commision Type" %></th>
       <th class="center"><%= sortable "campaign" , "Campaign" %></th>
       <th class="center">Image</th>
@@ -22,6 +23,7 @@
     <% @campaigns.each do |campaign| %>
         <tr>
           <td class="center"><%= campaign.company %></td>
+          <td class="center"><%= campaign.os %></td>
           <td class="center"><%= campaign.commision_type %></td>
           <td class="center"><%= campaign.name %></td>
           <td class="center"><%= link_to(image_tag(campaign.image_url , :width => 80, :height => 50), {:controller => 'ads', :action => 'show_campaign_ads', :id => campaign.id}) %></td>
