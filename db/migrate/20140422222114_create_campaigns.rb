@@ -9,6 +9,9 @@ class CreateCampaigns < ActiveRecord::Migration
       t.string "package_type" , :default => "Game", :null => false
       t.boolean "active", :default => true
       t.decimal "min_sdk", :precision => 3, :scale => 2
+      t.boolean "notifications", :default => false
+      t.boolean "emailing", :default => false
+      t.boolean "sms", :default => false
       t.text "instructions"
       t.timestamps
     end

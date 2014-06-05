@@ -14,6 +14,9 @@
       <th class="center"><%= sortable "active" , "Active" %></th>
       <th class="center"><%= sortable "campaign.ads.size" , "#Ads" %></th>
       <th class="center"><%= sortable "min_sdk" , "Min SDK" %></th>
+      <th class="center"><%= sortable "notifications" , "No" %></th>
+      <th class="center"><%= sortable "emailing" , "Em" %></th>
+      <th class="center"><%= sortable "sms" , "SMS" %></th>
       <th class="center">Actions</th>
     </tr>
     <% @campaigns.each do |campaign| %>
@@ -27,6 +30,9 @@
           <td class="center"><%= status_tag(campaign.active)%></td>
           <td class="center"><%= link_to(campaign.ads.size, {:controller => 'ads', :action => 'show_campaign_ads', :id => campaign.id}) %></td>
           <td class="center"><%= campaign.min_sdk %></td>
+          <td class="center"><%= status_tag(campaign.notifications)%></td>
+          <td class="center"><%= status_tag(campaign.emailing)%></td>
+          <td class="center"><%= status_tag(campaign.sms)%></td>
           <td class="actions">
             <%= link_to("Show", {:action => 'show', :id => campaign.id}, :class => 'action show') %>
             <%= link_to("Edit", {:action => 'edit', :id => campaign.id}, :class => 'action edit') %>

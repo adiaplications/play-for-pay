@@ -37,6 +37,22 @@
       <td><%= @campaign.min_sdk %></td>
     </tr>
     <tr>
+      <th>Notifications?</th>
+      <td><%= status_tag(@campaign.notifications) %></td>
+    </tr>
+    <tr>
+      <th>Emailing?</th>
+      <td><%= status_tag(@campaign.emailing) %></td>
+    </tr>
+    <tr>
+      <th>SMS?</th>
+      <td><%= status_tag(@campaign.sms) %></td>
+    </tr>
+    <tr>
+      <th>Instructions</th>
+      <td><%= text_area_tag(@campaign.instructions, @campaign.instructions, :size=> "24x6") %></td>
+    </tr>
+    <tr>
       <th>Created</th>
       <td><%= @campaign.created_at %></td>
     </tr>

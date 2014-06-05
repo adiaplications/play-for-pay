@@ -31,4 +31,21 @@
     <th>Min SDK</th>
     <td><%= f.number_field  :min_sdk, :class => 'text_field', :step => 'any' %></td>
   </tr>
+  <tr>
+    <th>Notifications?</th>
+    <td><%= f.select(:notifications, {"No" => false, "Yes" =>true} ) %></td>
+  </tr>
+  <tr>
+    <th>Emailing?</th>
+    <td><%= f.select(:emailing, {"No" => false, "Yes" =>true} ) %></td>
+  </tr>
+  <tr>
+    <th>SMS?</th>
+    <td><%= f.select(:sms, {"No" => false, "Yes" =>true} ) %></td>
+  </tr>
+  <tr>
+    <th>Instructions</th>
+    <td><%= text_area_tag(@campaign.instructions, "", :size=> "24x6") %></td>
+  </tr>
+
 </table>

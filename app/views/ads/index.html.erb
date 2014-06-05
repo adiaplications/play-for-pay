@@ -17,7 +17,7 @@
           <td class="center"><%= ad.campaign.name if ad.campaign %></td>
           <td class="center"><%= ad.country %></td>
           <td class="center"><%= number_to_currency(ad.price) %></td>
-          <td class="center"><%= ad.link_url %></td>
+          <td class="center"><%= link_to(ad.link_url, ad.link_url) %></td>
           <td class="actions">
             <%= link_to("Show", {:action => 'show', :id => ad.id}, :class => 'action show') %>
             <%= link_to("Edit", {:action => 'edit', :id => ad.id}, :class => 'action edit') %>

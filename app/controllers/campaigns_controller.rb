@@ -81,7 +81,7 @@ class CampaignsController < ApplicationController
     # same as using "params[:campaign]", except that it:
     # - raises an error if :subject is not present
     # - allows listed attributes to be mass-assigned
-    params.require(:campaign).permit(:company, :commision_type, :name, :image_url, :package_name, :package_type, :min_sdk, :active, :instructions)
+    params.require(:campaign).permit(:company, :commision_type, :name, :image_url, :package_name, :package_type, :min_sdk, :active, :notifications, :emailing, :sms, :instructions)
   end
 
   def sort_column

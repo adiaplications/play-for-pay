@@ -18,7 +18,7 @@
         </tr>
         <tr>
           <th>Image Url</th>
-          <td><%= @campaign.image_url %></td>
+          <td><%= link_to(@campaign.image_url, @campaign.image_url) %></td>
         </tr>
         <tr>
           <th>Active?</th>
@@ -40,7 +40,7 @@
     </tr>
     <tr>
       <th>Link Url</th>
-      <td><%= @ad.link_url %></td>
+      <td><%= link_to(@ad.link_url, @ad.link_url) %></td>
     </tr>
 
     <tr>

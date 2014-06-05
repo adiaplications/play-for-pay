@@ -34,6 +34,9 @@ ActiveRecord::Schema.define(version: 20140422222138) do
     t.string   "package_type",                                      default: "Game",       null: false
     t.boolean  "active",                                            default: true
     t.decimal  "min_sdk",                   precision: 3, scale: 2
+    t.boolean  "notifications",                                     default: false
+    t.boolean  "emailing",                                          default: false
+    t.boolean  "sms",                                               default: false
     t.text     "instructions"
     t.datetime "created_at"
     t.datetime "updated_at"
