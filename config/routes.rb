@@ -1,7 +1,10 @@
 Ads::Application.routes.draw do
 
+
+  root "auth#index"
+  get 'admin', :to => "access#index"
   #root "demo#index"
-  root "auth#login"
+
   match ':controller(/:action(/:id))', :via => [:get, :post]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

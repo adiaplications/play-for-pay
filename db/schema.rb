@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140422222138) do
+ActiveRecord::Schema.define(version: 20140606135631) do
+
+  create_table "admin_users", force: true do |t|
+    t.string   "username",        limit: 25, null: false
+    t.string   "password_digest"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "ads", force: true do |t|
     t.integer  "campaign_id"
@@ -27,6 +34,7 @@ ActiveRecord::Schema.define(version: 20140422222138) do
 
   create_table "campaigns", force: true do |t|
     t.string   "company",        limit: 30,                         default: "Mobpartner", null: false
+    t.string   "os",                                                default: "Android",    null: false
     t.string   "commision_type",                                    default: "CPI",        null: false
     t.string   "name",           limit: 30,                         default: "",           null: false
     t.string   "image_url",                                         default: "",           null: false

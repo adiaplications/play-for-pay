@@ -1,6 +1,8 @@
 class AdsController < ApplicationController
 
-  layout "admin"
+  layout 'admin'
+
+  before_action :confirm_logged_in
 
   helper_method :sort_column, :sort_direction
 
