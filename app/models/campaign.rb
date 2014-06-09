@@ -8,6 +8,6 @@ class Campaign < ActiveRecord::Base
 
   scope :active, lambda { where(:active => true) }
   scope :disactive, lambda { where(:active=> false) }
-  scope :sorted, lambda { order("campaigns.name ASC") }
+  scope :sorted, lambda { order("campaigns.name DESC") }
 
 end
