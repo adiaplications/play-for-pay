@@ -9,5 +9,5 @@ class Ad < ActiveRecord::Base
     where (["country LIKE ?", "#{query}"])
   }
 
-  scope :sorted, lambda { order("ads.price ASC") }
+  scope :sorted, lambda { order("ads.price DESC") }
 end
