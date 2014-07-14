@@ -1,10 +1,10 @@
-class CreateUsers < ActiveRecord::Migration
+class DeleteUsers < ActiveRecord::Migration
   def up
     create_table :users, :force => true do |t|
       t.string "email", :null => false
       t.string "password_digest"
       t.string "country"
-      t.integer "number_of_downloads" , :default => 0
+      t.integer "number_of_downloads", :default => 0
       t.decimal "total_earnings", :precision => 4, :scale => 2, :default => 0.0
       t.boolean "active", :default => true
       t.datetime "created_on", :default => '0000-00-00 00:00:00', :null => false

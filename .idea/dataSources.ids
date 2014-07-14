@@ -1,12 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source source="LOCAL" name="Rails ads: development" uuid="5d36825e-be52-4523-a0ac-1841dac8f776">
-    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  <data-source source="LOCAL" name="Rails ads: development" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="c0c1f8cc-ee16-491b-9527-219cc1e0aeb4">
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://127.0.0.1/ads_development</jdbc-url>
+    <libraries>
+      <library>
+        <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/mysql-connector-license.txt</url>
+      </library>
+      <library>
+        <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/mysql-connector-java-5.1.29-bin.jar</url>
+      </library>
+    </libraries>
   </data-source>
-  <data-source source="LOCAL" name="Rails ads: test" uuid="fd870f5d-3f15-4a08-b709-c4d1fee86170">
-    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  <data-source source="LOCAL" name="Rails ads: production" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="53cf7c22-3930-4036-9fa5-34257f762b4d">
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://127.0.0.1/ads_production</jdbc-url>
+    <user-name>ads</user-name>
+    <user-password>dfcbdfcedfc3df98df99df9adf99df92df9c</user-password>
+    <libraries>
+      <library>
+        <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/mysql-connector-license.txt</url>
+      </library>
+      <library>
+        <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/mysql-connector-java-5.1.29-bin.jar</url>
+      </library>
+    </libraries>
   </data-source>
-  <data-source source="LOCAL" name="Rails ads: production" uuid="67348875-cb97-46aa-9f78-273e351f2f81">
-    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  <data-source source="LOCAL" name="Rails ads: test" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="bb44febf-d5a9-4710-87fb-eb0e0e1370e0">
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://127.0.0.1/ads_test</jdbc-url>
+    <user-name>ads</user-name>
+    <user-password>dfcbdfcedfc3df98df99df9adf99df92df9c</user-password>
+    <libraries>
+      <library>
+        <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/mysql-connector-license.txt</url>
+      </library>
+      <library>
+        <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/mysql-connector-java-5.1.29-bin.jar</url>
+      </library>
+    </libraries>
   </data-source>
 </component>

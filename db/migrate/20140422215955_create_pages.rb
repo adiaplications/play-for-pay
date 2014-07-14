@@ -2,7 +2,7 @@ class CreatePages < ActiveRecord::Migration
 
   def up
     create_table :pages do |t|
-      t.integer "subject_id"
+      t.column "subject_id", :integer
       # same as: t.references :subject
       t.string "name"
       t.string "permalink"

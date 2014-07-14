@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140606135631) do
+ActiveRecord::Schema.define(version: 20140707224549) do
 
   create_table "admin_users", force: true do |t|
     t.string   "username",        limit: 25, null: false
@@ -87,13 +87,33 @@ ActiveRecord::Schema.define(version: 20140606135631) do
     t.datetime "updated_at"
   end
 
-  create_table "users", force: true do |t|
-    t.string   "first_name", limit: 25
-    t.string   "last_name",  limit: 50
-    t.string   "email",                 default: "", null: false
-    t.string   "password",   limit: 40
+  create_table "user_downloads", force: true do |t|
+    t.integer  "user_id",                                                 null: false
+    t.integer  "campaign_id"
+    t.string   "os",                                  default: "Android", null: false
+    t.decimal  "earn_price",  precision: 4, scale: 2,                     null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "user_downloads", ["user_id", "campaign_id"], name: "index_user_downloads_on_user_id_and_campaign_id", unique: true, using: :btree
+  add_index "user_downloads", ["user_id"], name: "index_user_downloads_on_user_id", using: :btree
+
+  create_table "users", force: true do |t|
+    t.string   "email",                                                      null: false
+    t.string   "password_digest"
+    t.string   "country"
+    t.integer  "number_of_downloads",                         default: 0
+    t.decimal  "total_earnings",      precision: 4, scale: 2, default: 0.0
+    t.boolean  "active",                                      default: true
+    t.datetime "created_on",                                                 null: false
+    t.datetime "last_visited_at",                                            null: false
+    t.integer  "failed_attempts",                             default: 0
+    t.datetime "last_faild_attempt",                                         null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
 end
