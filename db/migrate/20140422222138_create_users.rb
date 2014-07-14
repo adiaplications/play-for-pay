@@ -7,10 +7,10 @@ class CreateUsers < ActiveRecord::Migration
       t.integer "number_of_downloads" , :default => 0
       t.decimal "total_earnings", :precision => 4, :scale => 2, :default => 0.0
       t.boolean "active", :default => true
-      t.datetime "created_on", :default => '0000-00-00 00:00:00', :null => false
-      t.datetime "last_visited_at", :default => '0000-00-00 00:00:00', :null => false
+      t.datetime "created_on", :default => '2014-01-01 00:00:00', :null => false
+      t.datetime "last_visited_at", :default => '2014-01-01 00:00:00', :null => false
       t.integer "failed_attempts", :default => 0
-      t.datetime "last_faild_attempt", :default => '0000-00-00 00:00:00', :null => false
+      t.datetime "last_faild_attempt", :default => '2014-01-01 00:00:00', :null => false
       t.timestamps
     end
     add_index :users, :email, :unique => true

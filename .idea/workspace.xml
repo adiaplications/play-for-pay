@@ -114,19 +114,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20140422222138_create_users.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="20140422222138_create_users.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/migrate/20140422222138_create_users.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="36" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0">
+            <state line="12" column="71" selection-start="661" selection-end="661" vertical-scroll-proportion="0.32967034">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_download.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="user_download.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/user_download.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="199" selection-end="199" vertical-scroll-proportion="0.24725275">
+            <state line="9" column="0" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -164,9 +164,9 @@
         <option value="$PROJECT_DIR$/db/migrate/20140422222114_create_campaigns.rb" />
         <option value="$PROJECT_DIR$/app/models/user_download.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20140422222138_create_users.rb" />
         <option value="$PROJECT_DIR$/app/controllers/user_controller.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20140706203721_delete_users.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20140422222138_create_users.rb" />
       </list>
     </option>
   </component>
@@ -863,13 +863,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20140422222138_create_users.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="36" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="38" selection-start="374" selection-end="374" vertical-scroll-proportion="0.0">
@@ -900,7 +893,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/user_download.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="199" selection-end="199" vertical-scroll-proportion="0.24725275">
+        <state line="9" column="0" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20140422222138_create_users.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="71" selection-start="661" selection-end="661" vertical-scroll-proportion="0.32967034">
           <folding />
         </state>
       </provider>
